@@ -1,0 +1,289 @@
+:root {
+    /*BREAKPOINTS*/
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    /*COLORS*/
+    --Color-1: #DECCCC;
+    --Color-2: #00a2ff;
+    --Color-3: #15008a;
+    --Color-4: aliceblue;
+    --Color-5: aliceblue;
+    --Color-6: #3b0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+  }  
+
+  body {
+    overflow-y: scroll; /* Enable vertical scrolling */
+    position: relative; /* Ensure canvas position is relative to the body */
+    background-color: rgb(0, 0, 0); 
+}
+
+.hidden {
+    display: none;
+}
+
+/**/
+@media screen and (min-width: 0px) { 
+    
+    canvas {
+        display: block;
+        position: fixed; /* Fix canvas position */
+        top: 0;
+        left: 0;
+        z-index: -99;
+        height: 100vh;
+        width: 100vw; /* Set canvas height to match viewport height */
+    }  
+    
+
+    /* Adjust title header */
+    .title-header {
+        text-align: justify;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 50px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        color: var(--Color-4);
+        margin: 5px;
+        
+    }
+    
+    .header-prof {
+        z-index: 6;
+        border: solid 3px var(--Color-3);
+        border-radius: 50%;
+        height: 10rem;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: 2rem;
+        margin-right: 5px;
+    }
+    
+    .Introduction-sect-cont {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .Introduction-text{
+        font-size: larger;
+        text-align: justify;
+        color: var(--Color-4);
+        line-height: normal;
+        display: flex;
+        justify-content: center;
+        border: 2px solid var(--Color-3);
+        border-radius: 5px;
+        padding: 15px;
+        max-width: 900px;
+        
+    }
+    
+    .Introduction-img {
+        display: none;
+    }
+
+    .Education-sect, .work-experience{
+        display: flex;
+        justify-content: center;
+    }
+    .Education, .Work {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+        color: var(--Color-4);
+    }
+    
+    li {
+        list-style-type: none;
+    }
+
+    .flag {
+    max-height: 30px;
+    margin-top: 5px;
+    }
+
+    .info, .coding  {
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    border: solid 2px var(--Color-3);
+    border-radius: 5px;  
+    padding: 5px;
+    color: var(--Color-4);
+    }
+
+    .coding {
+    margin-top: 15px;
+    }
+
+    .contact-sect {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        color: var(--Color-4);
+    }
+    
+    .email, .link {
+        text-decoration: none;
+        color: var(--Color-2);
+    
+    }
+    
+    .email, .link:hover {
+        color: var(--Color-4);
+    }
+    
+
+}
+
+
+
+@media screen and (min-width: 992px) {
+
+    canvas {
+        display: block;
+        position: fixed; /* Fix canvas position */
+        top: 0;
+        left: 0;
+        z-index: -99;
+        height: 100vh;
+        width: 100vw; /* Set canvas height to match viewport height */
+    }  
+
+.title-area {
+    position: relative;
+    z-index: 6;
+}
+
+.title-header {
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: var(--Color-4);
+}
+
+.header-prof {
+    z-index: 6;
+    border: solid 3px var(--Color-3);
+    border-radius: 50%;
+    height: 10rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 50px;
+}
+
+.Introduction-sect-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.Introduction-text{
+    font-size: larger;
+    text-align: justify;
+    color: var(--Color-4);
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    border: 2px solid var(--Color-3);
+    border-radius: 5px;
+    margin-left: 20px;
+    padding: 15px;
+    max-width: 900px;
+    
+}
+
+.Introduction-img {
+    max-height: 400px;
+    border: solid 2px var(--Color-3);
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: all 0.3s ease;
+}
+
+.Introduction-img:hover {
+    transform: scale(1.40); /* Increase the size slightly */
+    border: 15px solid rgba(0, 0, 0, 0.5); /* Semi-transparent border */
+}
+
+.Education-sect, .work-experience{
+    display: flex;
+    justify-content: center;
+}
+.Education, .Work {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    color: var(--Color-4);
+}
+
+li {
+    list-style-type: none;
+}
+
+.flag {
+    max-height: 30px;
+    margin-top: 5px;
+}
+
+.info, .coding  {
+   display: flex;
+   justify-content: center;
+   max-width: 800px;
+   border: solid 2px var(--Color-3);
+   border-radius: 5px;  
+   padding: 5px;
+   color: var(--Color-4);
+}
+
+.coding {
+    margin-top: 15px;
+}
+
+.contact-sect {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    color: var(--Color-4);
+}
+
+.email, .link {
+    text-decoration: none;
+    color: var(--Color-2);
+
+}
+
+.email, .link:hover {
+    color: var(--Color-4);
+}
+
+/*.email, .link:visited {
+    color: var(--Color-6);
+}
+*/
+}
